@@ -41,32 +41,98 @@ public class Auto {
         return retorno;
     } 
     public String obtenerProvincia(){
-        var retorno="sin provincia";
-        
+        var retorno="TBD";
+        var primerCaracterPlaca=this.placa.charAt(0);
+        switch(primerCaracterPlaca){
+            case 'A':
+                retorno="Azuay";
+                break;
+            case 'B':
+                retorno="Bolivar";
+                break;
+            case 'C':
+                retorno="Carchi";
+                break;
+            case 'U':
+                retorno="Cañar";
+                break;
+            case 'X':
+                retorno="Cotopaxi";
+                break;
+            case 'H':
+                retorno="Chimborazo";
+                break;
+            case 'O':
+                retorno="Oro";
+                break;
+            case 'E':
+                retorno="Esmeraldas";
+                break;
+            case 'W':
+                retorno="Galapagos";
+                break;
+            case 'G':
+                retorno="Guayas";
+                break;
+            case 'I':
+                retorno="Imbabura";
+                break;
+            case 'L':
+                retorno="Loja";
+                break;
+            case 'R':
+                retorno="Los Rios";
+                break;
+            case 'M':
+                retorno="Manabi";
+                break;
+            case 'V':
+                retorno="Morona Santiago";
+                break;
+            case 'N':
+                retorno="Napo";
+                break;
+            case 'S':
+                retorno="Pastaza";
+                break;
+            case 'P':
+                retorno="Pichincha";
+                break;
+            case 'K':
+                retorno="Sucumbios";
+                break;
+            case 'Q':
+                retorno="Orellana";
+                break;
+            case 'T':
+                retorno="Tunguragua";
+                break;
+            case 'Z':
+                retorno="Zamora";
+                break;
+            case 'Y':
+                retorno="Santa Elena";
+                break;
+        }
         
         
         return retorno;
         
     }
-    public double calcularMatricula(){
-        var retorno=20000d;
-        if(this.precio>0 && this.precio<10000 && this.year>0 && this.year<2010){
-            retorno=(this.precio*10)/100;
+    public double calcularMatricula(int limitYear, int limitPrecio){
+        var retorno=10000d;
+        if(this.year>=0 && this.year<=limitYear){
+            if(this.precio>=0 && this.precio<=limitPrecio)
+                retorno=this.precio*0.1;
+            else
+                retorno=this.precio*0.2;
         }else{
-            if(this.precio > 0 && this.precio < 10000 && this.year>2010){
-                retorno=(this.precio*15)/100;
-            }else{
-                if(this.precio > 10000 && this.year>0 && this.year<2010){
-                    retorno=(this.precio*20)/100;
-                }else{
-                    if(this.precio > 10000 && this.year>2010){
-                        retorno=(this.precio*25)/100;
-                    }
-                }
-            }
+             if(this.precio>=0 && this.precio<=limitPrecio)
+                retorno=this.precio*0.15;
+            else
+                retorno=this.precio*0.25;           
         }
         return retorno;
-        
     }
   
 }

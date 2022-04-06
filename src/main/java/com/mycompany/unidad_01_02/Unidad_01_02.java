@@ -32,7 +32,9 @@ public class Unidad_01_02 {
             System.out.println("El auto de placa : "+autoTefa.placa +" no es un taxi");
         }
         System.out.println("El auto de precio : "+autoTefa.precio +" Debe pagar la tasa solidaria "+autoTefa.calcularTasaSolidaria());
-        System.out.println("El valor de la matricula del auto es : "+autoTefa.calcularMatricula());
+        var costoMatricula= autoTefa.calcularMatricula(2010, 10000);
+        System.out.println("El valor de la matricula del auto es : "+costoMatricula+" dólares");
+        System.out.println("Esta pertenece a la provincia: "+autoTefa.obtenerProvincia());
 
         
         var autoMarce= new Auto();
@@ -53,7 +55,9 @@ public class Unidad_01_02 {
             System.out.println("El auto de placa : "+autoMarce.placa +" no es un taxi");
         }
         System.out.println("El auto de precio : "+autoMarce.precio +" Debe pagar la tasa solidaria "+autoMarce.calcularTasaSolidaria());
-        System.out.println("El valor de la matricula del auto es : "+autoMarce.calcularMatricula());
+        var costoMatricula2= autoMarce.calcularMatricula(2010, 10000);
+        System.out.println("El valor de la matricula del auto es : "+costoMatricula2+" dólares");
+        System.out.println("Esta pertenece a la provincia: "+autoMarce.obtenerProvincia());
         
         var animal1=new Animal();
         animal1.nombre="Perro";
