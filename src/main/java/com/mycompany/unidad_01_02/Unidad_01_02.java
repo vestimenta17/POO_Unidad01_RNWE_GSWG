@@ -17,7 +17,7 @@ public class Unidad_01_02 {
         autoTefa.color="amarillo";
         autoTefa.marca="KIA";
         autoTefa.placa="ADF1234";
-        autoTefa.year=2022;
+        autoTefa.year=2017;
         autoTefa.precio=22500;
         
         System.out.println( autoTefa.color+" | "+
@@ -35,6 +35,8 @@ public class Unidad_01_02 {
         var costoMatricula= autoTefa.calcularMatricula(2010, 10000);
         System.out.println("El valor de la matricula del auto es : "+costoMatricula+" dólares");
         System.out.println("Esta pertenece a la provincia: "+autoTefa.obtenerProvincia());
+        var añosCarro=autoTefa.calcularYears(2022);
+        System.out.println("El carro tiene: "+añosCarro+" años");
 
         
         var autoMarce= new Auto();

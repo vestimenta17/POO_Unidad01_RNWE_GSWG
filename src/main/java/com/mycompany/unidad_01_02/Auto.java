@@ -119,6 +119,16 @@ public class Auto {
         return retorno;
         
     }
+    public int calcularYears(int currentYear){
+        var retorno=1000;
+        retorno=(currentYear-this.year);
+        return retorno;
+    }
+    public boolean seguroValido(int currentYear, int edadMax){
+        var retorno=false;
+        
+        return retorno;
+    }
     public double calcularMatricula(int limitYear, int limitPrecio){
         var retorno=10000d;
         if(this.year>=0 && this.year<=limitYear){
