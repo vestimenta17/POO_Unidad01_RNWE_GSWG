@@ -37,6 +37,27 @@ public class Unidad_01_02 {
         System.out.println("Esta pertenece a la provincia: "+autoTefa.obtenerProvincia());
         var añosCarro=autoTefa.calcularYears(2022);
         System.out.println("El carro tiene: "+añosCarro+" años");
+        var seguroValido=false;
+        seguroValido=autoTefa.seguroValido(2022, 4);
+        if(seguroValido==true){
+            System.out.println("El seguro de : "+autoTefa.placa +" es valido");
+        } else{
+            System.out.println("El seguro de :"+autoTefa.placa +" no es valido");
+        }
+        var esProvinciaDe=false;
+        esProvinciaDe=autoTefa.esProvinciaDe("A");
+        if(esProvinciaDe==true){
+            System.out.println("Este carro pertenece a: "+esProvinciaDe);
+        }else{
+            System.out.println("No pertenece a ninguna provincia");
+        }
+        var esNumeros=true;
+        if(esNumeros==false){
+            esNumeros=autoTefa.esNumeros("Pertenece");
+        } else{
+            esNumeros=autoTefa.esNumeros("No Pertenece");  
+        }
+        
 
         
         var autoMarce= new Auto();
@@ -60,7 +81,22 @@ public class Unidad_01_02 {
         var costoMatricula2= autoMarce.calcularMatricula(2010, 10000);
         System.out.println("El valor de la matricula del auto es : "+costoMatricula2+" dólares");
         System.out.println("Esta pertenece a la provincia: "+autoMarce.obtenerProvincia());
-        
+        var añosCarro2=autoMarce.calcularYears(2022);
+        System.out.println("El carro tiene: "+añosCarro2+" años");
+        var seguroValido2=false;
+        seguroValido2=autoMarce.seguroValido(2022, 3);
+        if(seguroValido2==true){
+            System.out.println("El seguro de : "+autoMarce.placa +" es valido");
+        } else{
+            System.out.println("El seguro de :"+autoMarce.placa +" no es valido");
+        }
+        var esProvinciaDe1=false;
+        esProvinciaDe1=autoMarce.esProvinciaDe("Azuay");
+        if(esProvinciaDe==true){
+            System.out.println("Este carro pertenece a: "+esProvinciaDe1);
+        }else{
+            System.out.println("No pertenece a ninguna provincia");
+        }
         var animal1=new Animal();
         animal1.nombre="Perro";
         animal1.raza="Pekines";

@@ -113,11 +113,8 @@ public class Auto {
             case 'Y':
                 retorno="Santa Elena";
                 break;
-        }
-        
-        
-        return retorno;
-        
+        } 
+        return retorno;   
     }
     public int calcularYears(int currentYear){
         var retorno=1000;
@@ -126,8 +123,40 @@ public class Auto {
     }
     public boolean seguroValido(int currentYear, int edadMax){
         var retorno=false;
-        
+        if(this.calcularYears(currentYear)<=edadMax){
+            retorno=true;
+        }
         return retorno;
+    }
+    public boolean esProvinciaDe(String provincia){
+        var retorno=false;
+        var primerLetraProvincia=this.placa.substring(0,1);
+        var primerLetraPlaca=this.placa.substring(0,1);
+        if(provincia=="Azuay" && primerLetraPlaca=="A"){
+            retorno=true;
+        }
+        if(provincia=="Guayas" && primerLetraPlaca=="G"){
+            retorno=true;
+        }
+        if(provincia=="Cañar" && primerLetraPlaca=="U"){
+            retorno=true;
+        }
+        if(provincia=="Pichincha" && primerLetraPlaca=="P"){
+            retorno=true;
+        }     
+        return retorno;
+    }
+    public boolean esNumeros(String cadena){
+        boolean retorno=true;
+        var i=0;
+        var c=new char[4];
+        while(i<4){
+            c[i]=cadena.charAt(i);
+            if(!Character.isDigit(c[i]));
+            retorno=false;
+            i=i+1;
+        }
+        return retorno;    
     }
     public double calcularMatricula(int limitYear, int limitPrecio){
         var retorno=10000d;
@@ -144,7 +173,7 @@ public class Auto {
         }
         return retorno;
     }
-  
+    
 }
     
 
