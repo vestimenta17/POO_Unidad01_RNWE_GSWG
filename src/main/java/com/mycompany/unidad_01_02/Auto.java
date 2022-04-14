@@ -14,6 +14,7 @@ public class Auto {
     String color;
     double precio;
     int year;
+    Propietario unPropietario;
     public boolean esTaxi(){
         var retorno=false;
         if(this.color=="amarillo"){
