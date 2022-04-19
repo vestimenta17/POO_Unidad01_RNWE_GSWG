@@ -97,10 +97,6 @@ public class Unidad_01_02 {
         }else{
             System.out.println("No pertenece a ninguna provincia");
         }
-        var animal1=new Animal();
-        animal1.nombre="Perro";
-        animal1.raza="Pekines";
-        animal1.peso=3.1;
-        animal1.añoNac=2020;
+     
     }
 }

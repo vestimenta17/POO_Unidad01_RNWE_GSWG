@@ -15,7 +15,7 @@ public class PrincipalTelefonoPersona {
         operadoraTel.descripcion="negado";
         operadoraTel.paginaWeb="www.pagina";
         var persona=new Persona();
-        persona.nombre="Tefa";
+        persona.nombre="Tefa";  
         persona.cedula="0106384860";
         persona.fechaNacimiento=02-05-2000;
         var telefono=new Telefono();
